@@ -1,14 +1,12 @@
 'use strict';
 
-const arr = [2, 4];
-let sum = 0;
+const sum = module.exports = {};
 
-for (let i = 0; i < arr.length; i++) {
-  sum += arr[i];
+sum.add = (num1, num2) => {
+  return (typeof num1 === 'number' && typeof num2 === 'number') ? num1 + num2 : null;
+};
 
-  if (sum === isNAN) {
-    throw new Error('Num must be a number');
-  } else {
-    return sum;
-  }
-}
+sum.sub = (num1, num2) => {
+  return (typeof num1 === 'number' && typeof num2 === 'number') ? num2 - num1 : null;
+};
+
